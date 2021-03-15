@@ -1,0 +1,44 @@
+html, body {
+  height: 100%;
+}
+
+header {
+  height: 40%;
+}
+
+#home {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(45.5%, #05C793), color-stop(40%, #FFEDE1));
+  background: linear-gradient(180deg, #05C793 45.5%, #FFEDE1 40%);
+}
+
+#home a {
+  color: #000000;
+}
+
+#title {
+  text-align: center;
+}
+
+#title h1 {
+  font-size: 5.00rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(54.5%, #FFEDE1), color-stop(40%, #05C793));
+  background: linear-gradient(#FFEDE1 54.5%, #05C793 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1050px) {
+  #home {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.5%, #05C793), color-stop(40%, #FFEDE1));
+    background: linear-gradient(180deg, #05C793 51.5%, #FFEDE1 40%);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #home {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50vh, #05C793), color-stop(40%, #FFEDE1));
+    background: linear-gradient(180deg, #05C793 50vh, #FFEDE1 40%);
+  }
+}
+/*# sourceMappingURL=home.css.map */

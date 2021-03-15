@@ -1,0 +1,47 @@
+@import 'variable';
+html, body {
+    height: 100%;
+  }
+
+header{
+    height: 40%;
+  }
+#home{
+    height: 100%;
+    background: linear-gradient(180deg,$last_color 45.5%, $second_color 40%);
+    a { 
+        color: $first-color;
+    }
+}
+#title{
+    h1{
+        font-size: 5.00rem;
+        background:  linear-gradient($second_color 54.5%, $last_color 40%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    text-align: center;
+    
+}
+
+
+@media screen and (max-width : 1050px){
+
+    #home{
+        
+        background: linear-gradient(180deg,$last_color 51.5%, $second_color 40%);
+       
+    }
+
+
+}
+
+@media screen and (max-width : 580px){
+
+    #home{
+        background: linear-gradient(180deg, #05C793 50vh, #FFEDE1 40%);
+    
+    }
+
+
+}
