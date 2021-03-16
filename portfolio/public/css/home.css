@@ -1,15 +1,32 @@
 html, body {
   height: 100%;
+  overflow: auto;
 }
 
 header {
-  height: 40%;
+  height: 6vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #05C793;
+}
+
+header #menu {
+  overflow: auto;
+}
+
+header #menu li {
+  font-size: 1rem;
+}
+
+header #menu li a {
+  color: #FFEDE1;
 }
 
 #home {
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(45.5%, #05C793), color-stop(40%, #FFEDE1));
-  background: linear-gradient(180deg, #05C793 45.5%, #FFEDE1 40%);
+  height: 92vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40vh, #05C793), color-stop(40%, #FFEDE1));
+  background: linear-gradient(180deg, #05C793 40vh, #FFEDE1 40%);
 }
 
 #home a {
@@ -17,28 +34,44 @@ header {
 }
 
 #title {
+  height: 37vh;
   text-align: center;
+}
+
+#title .tipying {
+  color: #000000;
+}
+
+#title .typed-cursor {
+  color: #000000;
 }
 
 #title h1 {
   font-size: 5.00rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(54.5%, #FFEDE1), color-stop(40%, #05C793));
-  background: linear-gradient(#FFEDE1 54.5%, #05C793 40%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FFEDE1;
 }
 
-@media screen and (max-width: 1050px) {
-  #home {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.5%, #05C793), color-stop(40%, #FFEDE1));
-    background: linear-gradient(180deg, #05C793 51.5%, #FFEDE1 40%);
-  }
+#cards {
+  height: 56vh;
 }
 
-@media screen and (max-width: 580px) {
-  #home {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50vh, #05C793), color-stop(40%, #FFEDE1));
-    background: linear-gradient(180deg, #05C793 50vh, #FFEDE1 40%);
+#cards .imgCard {
+  height: 34vh;
+}
+
+#cards .card:hover {
+  background: #fff;
+  -webkit-box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform: translate(0, -10%);
+          transform: translate(0, -10%);
+}
+
+@media screen and (max-width: 570px) {
+  #title h1 {
+    font-size: 4.00rem;
   }
 }
 /*# sourceMappingURL=home.css.map */
