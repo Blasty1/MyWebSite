@@ -7,6 +7,7 @@
 require('./bootstrap');
 window.Typed = require('typed.js')
 window.Vue = require('vue');
+window.Aos = require('aos')
 
 /**
  * The following block of code may be used to automatically register your

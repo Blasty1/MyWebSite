@@ -1,6 +1,53 @@
-html, body {
+@-webkit-keyframes blob {
+  25% {
+    d: path("M 90 210 C 90 180 110 160 130 160 C 160 160 180 140 200 130 C 230 120 270 100 290 140 C 310 170 340 100 360 140 C 370 160 390 180 390 210 C 390 240 380 290 350 280 C 330 270 300 280 280 290 C 260 300 230 300 220 290 C 200 270 160 310 140 280 C 130 260 90 240 90 210 ");
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    d: path("M 90 210 C 90 180 100 150 120 130 C 150 100 180 140 200 130 C 230 120 270 100 290 140 C 300 160 330 130 360 140 C 390 150 390 180 390 210 C 390 240 380 300 350 280 C 330 270 320 230 280 260 C 260 280 220 310 200 290 C 180 270 160 280 140 280 C 110 280 90 240 90 210");
+  }
+  75% {
+    d: path("M 90 210 C 90 180 110 180 130 170 C 150 160 170 130 200 130 C 240 130 260 150 290 140 C 310 130 340 120 360 140 C 380 160 390 180 390 210 C 390 240 380 260 350 270 C 320 280 290 270 270 260 C 240 250 230 280 210 290 C 180 310 130 300 110 280 C 90 260 90 240 90 210");
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@keyframes blob {
+  25% {
+    d: path("M 90 210 C 90 180 110 160 130 160 C 160 160 180 140 200 130 C 230 120 270 100 290 140 C 310 170 340 100 360 140 C 370 160 390 180 390 210 C 390 240 380 290 350 280 C 330 270 300 280 280 290 C 260 300 230 300 220 290 C 200 270 160 310 140 280 C 130 260 90 240 90 210 ");
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    d: path("M 90 210 C 90 180 100 150 120 130 C 150 100 180 140 200 130 C 230 120 270 100 290 140 C 300 160 330 130 360 140 C 390 150 390 180 390 210 C 390 240 380 300 350 280 C 330 270 320 230 280 260 C 260 280 220 310 200 290 C 180 270 160 280 140 280 C 110 280 90 240 90 210");
+  }
+  75% {
+    d: path("M 90 210 C 90 180 110 180 130 170 C 150 160 170 130 200 130 C 240 130 260 150 290 140 C 310 130 340 120 360 140 C 380 160 390 180 390 210 C 390 240 380 260 350 270 C 320 280 290 270 270 260 C 240 250 230 280 210 290 C 180 310 130 300 110 280 C 90 260 90 240 90 210");
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@-webkit-keyframes progress {
+  20% {
+  }
+}
+
+@keyframes progress {
+  20% {
+  }
+}
+
+html {
   height: 100%;
   overflow: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
 }
 
 header {
@@ -9,6 +56,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #05C793;
+  z-index: 100;
 }
 
 header #menu {
@@ -20,17 +68,60 @@ header #menu li {
 }
 
 header #menu li a {
-  color: #FFEDE1;
+  color: #FFFFFF;
 }
 
 #home {
   height: 92vh;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40vh, #05C793), color-stop(40%, #FFEDE1));
-  background: linear-gradient(180deg, #05C793 40vh, #FFEDE1 40%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40vh, #05C793), color-stop(40%, #FFFFFF));
+  background: linear-gradient(180deg, #05C793 40vh, #FFFFFF 40%);
 }
 
 #home a {
   color: #000000;
+}
+
+#about {
+  height: 92vh;
+}
+
+#about #about_title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  color: #FFFFFF;
+}
+
+#about #about_title h1 {
+  z-index: 1;
+}
+
+#about #about_svg_title {
+  fill: #05C793;
+  height: inherit;
+}
+
+#about #about_svg_title path {
+  cursor: pointer;
+  -webkit-animation: blob 2s infinite forwards;
+          animation: blob 2s infinite forwards;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.list {
+  list-style: none;
+}
+
+.progress-bar {
+  background-color: #05C793;
+}
+
+#works {
+  height: 92vh;
 }
 
 #title {
@@ -48,7 +139,7 @@ header #menu li a {
 
 #title h1 {
   font-size: 5.00rem;
-  color: #FFEDE1;
+  color: #FFFFFF;
 }
 
 #cards {
@@ -57,6 +148,10 @@ header #menu li a {
 
 #cards .imgCard {
   height: 34vh;
+}
+
+.active {
+  border-bottom: 3px solid #FFFFFF;
 }
 
 #cards .card:hover {
@@ -69,9 +164,56 @@ header #menu li a {
           transform: translate(0, -10%);
 }
 
+#triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 27vh solid #05C793;
+  border-left: 47vw solid transparent;
+}
+
+@media screen and (max-width: 1400px) {
+  #triangle {
+    border-left: 46vw solid transparent;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #triangle {
+    border-left: 45vw solid transparent;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #triangle {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 570px) {
   #title h1 {
     font-size: 4.00rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #home {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #home #cards {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #title h1 {
+    font-size: 2.00rem;
+  }
+  header {
+    height: 9vh;
   }
 }
 /*# sourceMappingURL=home.css.map */
