@@ -2,7 +2,7 @@
 @import 'animations';
 
 html {
-    height: 100%;
+    height: fit-content;
     overflow: auto;
     scroll-behavior: smooth;
   }
@@ -37,44 +37,54 @@ header{
         color: $first-color;
     }
 }
+.body_about{
+    margin-top: -6em;
+}
 #about{
-    height: 92vh;
-    #about_title{
-        width: fit-content;
-        height: 40vh;
-        width: 100%;
-        position: relative;
-        color : $second_color;
-        h1{ 
-            z-index: 1;
-        }
-    
-    }
-    #about_svg_title{
-        fill: $last_color;
-        height: inherit;
-            path {
-                cursor: pointer;
-                animation: blob 2s infinite forwards;
-                transform-origin: 50% 50%;
-        
-              
-            }
+    height: fit-content;
+    background-color: $second_color;
 
-            
+}
+.box_title{
+    width: fit-content;
+    
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    color : $second_color;
+    h1{ 
+        z-index: 1;
     }
+
+}
+.box_svg_title{
+    fill: $last_color;
+    height: inherit;
+        path {
+            cursor: pointer;
+            animation: blob 2s infinite forwards;
+            transform-origin: 50% 50%;
+    
+          
+        }      
 }
 .list{
     list-style: none;
+    height: 40vh;
+overflow: auto;
+margin : 0;
 }
 .progress-bar{
     background-color: $last_color;
 }
 #works{
-    height: 92vh;
+    height: fit-content;
+    background-color: $second_color;
+
 }
 #title{
     height: 37vh;
+    position: relative;
     .tipying{
         color: $first-color;
     }
@@ -93,7 +103,7 @@ header{
     height: 56vh;
   
     .imgCard{
-        height: 34vh;
+        height: 27vh;
     }
     
 }
@@ -107,31 +117,49 @@ header{
     transition: all 0.2s ease-in;
     transform: translate(0,-10%);
 }
-#triangle{
-    width: 0;
-    height: 0;
-    border-bottom: 27vh solid $last_color;
-    border-left: 47vw solid transparent;
+#icons{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: -10%;
+    a {
+        margin: 0.5em;
+        color: #FFFFFF;
+    }
+    
+}
+#box-works{
+    width: 40vh;
+height: 15vh;
+background: #05c793;
+text-align: center;
+display: flex;
+margin: auto;
+
+color: white;
+margin: auto;
+h2{
+    margin: auto;
+}
+
+
 }
 @media screen and (max-width : 1400px) {
 
     
-    #triangle{
-        border-left: 46vw solid transparent;
-    }
+    
 
 }
 
-@media screen and(max-width : 1000px){
-    #triangle{
-        border-left: 45vw solid transparent;
-    }
+@media screen and(max-width : 1190px){
 
+   
 }
 @media screen and (max-width : 790px) {
 
-    #triangle{
-        display: none;
+    #icons{
+        position: absolute;
+        bottom : 2%;
     }
 }
 @media screen and (max-width : 570px){

@@ -1,0 +1,70 @@
+@import "variable";
+
+#tns1-mw {
+    height: fit-content;
+    width: fit-content;
+    border: 5px solid $third_color;
+    border-radius: 5px;
+    
+}
+.tns-nav{
+  display: none;
+}
+
+.tns-item
+{
+  position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    cursor: pointer;
+    background-color: $third_color;
+}
+#right-row,#left-row
+{
+  cursor: pointer;
+}
+.carousel
+{
+  margin-top: -5em;
+}
+#controls-nav
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.off{
+  display: none;
+}
+.tns-slider:hover .overlay {
+    opacity: 0.9;
+}
+
+.text {
+    color: $first_color;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media screen and (min-width: 730px) {
+    #tns1-mw {
+      max-width: 80%;
+      margin: auto;
+    }
+}
