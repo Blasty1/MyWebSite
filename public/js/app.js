@@ -55180,8 +55180,8 @@ var projects = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/brunobryan/Desktop/Programmazione/MyWebSite/portfolio/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/brunobryan/Desktop/Programmazione/MyWebSite/portfolio/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/brunobryan/Desktop/Programmazione/MyWebSite/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/brunobryan/Desktop/Programmazione/MyWebSite/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
