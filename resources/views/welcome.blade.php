@@ -10,6 +10,15 @@
   <link rel="stylesheet" href="/css/slider.css">
 
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MR0LJ8DY02"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MR0LJ8DY02');
+</script>
 
 <body data-spy="scroll" data-target="#menu">
   <header>
